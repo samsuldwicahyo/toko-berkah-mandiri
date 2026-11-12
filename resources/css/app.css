@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    [x-cloak] {
+        display: none !important;
+    }
+
+    body {
+        @apply bg-surface text-gray-900 antialiased;
+    }
+}
+
+@layer components {
+    .app-card {
+        @apply rounded-xl border border-gray-100 bg-white shadow-sm;
+    }
+
+    .app-input {
+        @apply w-full rounded-xl border-gray-200 bg-white px-4 py-3 text-sm text-gray-900 shadow-sm placeholder:text-gray-400 focus:border-primary focus:ring-primary;
+    }
+
+    .app-file-input {
+        @apply block w-full rounded-xl border border-dashed border-gray-200 bg-white px-4 py-3 text-sm text-gray-600 shadow-sm file:mr-4 file:rounded-lg file:border-0 file:bg-primary-light file:px-4 file:py-2 file:font-semibold file:text-primary-dark hover:file:bg-primary-light/80;
+    }
+
+    .app-button-primary {
+        @apply inline-flex items-center justify-center rounded-xl bg-primary px-4 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
+    }
+
+    .app-button-secondary {
+        @apply inline-flex items-center justify-center rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-gray-700 transition hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-200 focus:ring-offset-2;
+    }
+
+    .app-button-danger {
+        @apply inline-flex items-center justify-center rounded-xl border border-danger/20 bg-white px-4 py-3 text-sm font-semibold text-danger transition hover:bg-danger/10 focus:outline-none focus:ring-2 focus:ring-danger/20 focus:ring-offset-2;
+    }
+
+    .app-badge-success {
+        @apply inline-flex items-center rounded-full bg-success/10 px-3 py-1 text-xs font-semibold text-success;
+    }
+
+    .app-badge-warning {
+        @apply inline-flex items-center rounded-full bg-warning/10 px-3 py-1 text-xs font-semibold text-warning;
+    }
+
+    .app-badge-danger {
+        @apply inline-flex items-center rounded-full bg-danger/10 px-3 py-1 text-xs font-semibold text-danger;
+    }
+
+    .app-badge-primary {
+        @apply inline-flex items-center rounded-full bg-primary-light px-3 py-1 text-xs font-semibold text-primary-dark;
+    }
+
+    .app-table {
+        @apply min-w-full divide-y divide-gray-100;
+    }
+
+    .app-table-head {
+        @apply bg-gray-50 text-sm text-gray-600;
+    }
+
+    .app-th {
+        @apply px-4 py-3 text-left text-sm font-medium sm:px-6;
+    }
+
+    .app-td {
+        @apply px-4 py-4 text-sm text-gray-600 sm:px-6;
+    }
+}
+
+@media print {
+    body {
+        background: #ffffff !important;
+    }
+
+    .app-shell-sidebar,
+    .app-shell-navbar,
+    .app-print-hidden {
+        display: none !important;
+    }
+
+    .app-shell-content {
+        padding-left: 0 !important;
+    }
+
+    .app-shell-main {
+        padding: 0 !important;
+    }
+
+    .app-shell-container {
+        max-width: none !important;
+    }
+
+    .app-card {
+        box-shadow: none !important;
+        border-color: #e5e7eb !important;
+    }
+}
